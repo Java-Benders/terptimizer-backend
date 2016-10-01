@@ -39,4 +39,8 @@ public class Course {
 		return professor;
 	}
 	
+	public void something(){
+		String woo = "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	}
+	
 }
