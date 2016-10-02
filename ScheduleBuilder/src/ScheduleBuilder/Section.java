@@ -6,12 +6,14 @@ public class Section {
 	
 	private ArrayList<TimeBlock> sectionBlocks;
 	private final String sectionID, courseID;
+	private final String professor;
 	
-	public Section(int numberOfBlocks, String sectionID, String courseID){
+	public Section(String sectionID, String courseID, String professor){
 		
 		sectionBlocks = new ArrayList<TimeBlock>();
 		this.sectionID = sectionID;
 		this.courseID = courseID;
+		this.professor = professor;
 		
 	}
 	
@@ -25,6 +27,10 @@ public class Section {
 	
 	public String getCourseID(){
 		return courseID;
+	}
+	
+	public String getProfessor(){
+		return professor;
 	}
 	
 	public String toString(){
@@ -69,16 +75,10 @@ public class Section {
 		return false;
 	}
 	
-	/*
-	 * Sort elements of the sectionBlock ArrayList based on having an earlier time first
-	 */
-//	public ArrayList<TimeBlock> sortTimes(){
-//		
-//		
-//		
-//		
-//	}
-	
+	public ArrayList<TimeBlock> addTimeBlock(TimeBlock block){
+		sectionBlocks.add(block);
+		return sectionBlocks;
+	}
 	
 	
 	

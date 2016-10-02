@@ -14,6 +14,10 @@ public enum Day {
 		this.value = value;
 	}
 	
+//	private Day(int value){
+//		
+//	}
+	
 	public String getName(){
 		return name;
 	}
@@ -26,6 +30,33 @@ public enum Day {
 		return totalDays;
 	}
 
-	
+	public static Day getDayFromValue(int num){
+		Day day = null;
+		switch(num){
+			case 1:
+				day = Day.MON;
+				break;
+			
+			case 2:
+				day = Day.TUE;
+				break;
+				
+			case 3:
+				day = Day.WED;
+				break;
+				
+			case 4:
+				day = Day.THU;
+				break;
+				
+			case 5:
+				day = Day.FRI;
+				break;
+				
+			default:
+				break;
+		}
+		return day;
+	}
 	
 }
