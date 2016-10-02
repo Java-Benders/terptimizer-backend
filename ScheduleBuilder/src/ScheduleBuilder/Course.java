@@ -11,6 +11,9 @@ public class Course {
 	private final int credits;
 	private final String professor;
 	
+	/*
+	 * Normal Constructor
+	 */
 	public Course(String courseId, String courseName, int credits, String professor){
 		courseSections = new ArrayList<Section>();
 		this.courseId = courseId;
@@ -19,11 +22,18 @@ public class Course {
 		this.professor = professor;
 	}
 	
+	/*
+	 * Copy Constructor
+	 */
+	public Course(Course c){
+		this(c.getCourseID(), c.getCourseName(), c.getCredits(), c.getProfessor());
+	}
+	
 	public ArrayList<Section> getCourseSections(){
 		return courseSections;
 	}
 	
-	public String courseId(){
+	public String getCourseID(){
 		return courseId;
 	}
 	

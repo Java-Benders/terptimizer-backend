@@ -54,6 +54,12 @@ public class TimeBlock {
 				endTime/60 + ":" + endMin + " (" + type + ") in " + room;
 	}
 	
-	
+	/*
+	 * Compares to TimeBlocks based on their startTime
+	 * Earlier times are first
+	 */
+	public int compareTo(TimeBlock block){
+		return startTime - block.getStartTime();
+	}
 	
 }

@@ -27,6 +27,17 @@ public class Section {
 		return courseID;
 	}
 	
+	public String toString(){
+		
+		String str = "Section: " + sectionID;
+		
+		for(TimeBlock block : sectionBlocks){
+			str += block + "\n";
+		}
+		
+		return str;
+	}
+	
 	/*
 	 * Returns true if there an overlap with the TimeBlocks of the Section in the parameter 
 	 * with any of the Sections in the current object's ArrayList
@@ -57,5 +68,18 @@ public class Section {
 		
 		return false;
 	}
+	
+	/*
+	 * Sort elements of the sectionBlock ArrayList based on having an earlier time first
+	 */
+//	public ArrayList<TimeBlock> sortTimes(){
+//		
+//		
+//		
+//		
+//	}
+	
+	
+	
 	
 }
